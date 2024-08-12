@@ -1,0 +1,6 @@
+{
+  "max_depth": 5,
+  "min_samples_leaf": 2,
+  "learning_rate": 1.0,
+  "max_iter": 20
+}
