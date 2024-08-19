@@ -89,7 +89,7 @@ class Classifier:
             train_inputs (pandas.DataFrame): The features of the training data.
             train_targets (pandas.Series): The labels of the training data.
         """
-        sample_weight = {0: 1.0, 1: self.positive_class_weight}
+        sample_weight = train_targets.map({0: 1, 1: self.positive_class_weight})
         self.model.fit(train_inputs, train_targets, sample_weight=sample_weight)
         self._is_trained = True
 
